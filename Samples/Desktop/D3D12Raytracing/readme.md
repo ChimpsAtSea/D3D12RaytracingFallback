@@ -1,34 +1,11 @@
----
-page_type: sample
-languages:
-- cpp
-products:
-- windows-api-win32
-name: Direct3D 12 raytracing samples
-urlFragment: d3d12-raytracing-samples-win32
-description: This collection of samples act as an introduction to DirectX Raytracing (DXR).
-extendedZipContent:
-- path: LICENSE
-  target: LICENSE
----
+# D3D12 Raytracing Samples
+This collection of samples act as an introduction to DirectX Raytracing (DXR). The samples are divided into tutorials and advanced samples. Each tutorial sample introduces a few new DXR concepts. Advanced samples demonstrate more complex techniques and applications of raytracing. We will be adding more samples in the coming future, so check back. In addition, you can find more DXR samples tutorials at [Nvidia's DXR samples Github](https://github.com/NVIDIAGameWorks/DxrTutorials).
 
-# Direct3D 12 raytracing samples
-This collection of samples act as an introduction to DirectX Raytracing (DXR). The samples are divided into tutorials and advanced samples. Each tutorial sample introduces a few new DXR concepts. Advanced samples demonstrate more complex techniques and applications of raytracing.
-
-### Requirements
-* GPU and driver with support for [DirectX 12 Ultimate](http://aka.ms/DirectX12UltimateDev)
-
-  <img src="../../../Assets/DirectX12Ultimate.png" alt="DirectX 12 Ultimate" height="100">
+The samples are implemented using both DXR and D3D12 Raytracing Fallback Layer APIs. This is purely for demonstration purposes to show API differences. Real-world applications will implement only one or the other. The Fallback Layer uses DXR if a driver and OS supports it. Otherwise, it falls back to the compute pipeline to emulate raytracing. Developers aiming for wider HW support should target the Fallback Layer.
 
 ### Getting Started
-* DXR spec/documentation is available at [DirectX Specs site](https://microsoft.github.io/DirectX-Specs/d3d/Raytracing.html).
-
-# Known issues
-Depending on your Visual Studio version, some samples may fail to compile with these errors:
- * The system cannot find the path specified. *.hlsl.h
- * error MSB6006: "dxc.exe" exited with code 1.
-
-Please see this GitHub issue for details on how to fix it: https://github.com/microsoft/DirectX-Graphics-Samples/issues/657
+* DXR spec/documentation is available in the SDK package at [Getting Started with Raytracing](http://forums.directxtech.com/index.php?topic=5860.0) post.
+* [Raytracing Fallback Layer documentation](../../../Libraries/D3D12RaytracingFallback/readme.md).
 
 # Tutorial Samples
 ## 1. [Hello World Sample](src/D3D12RaytracingHelloWorld/readme.md)
@@ -46,26 +23,29 @@ This sample demonstrates how to implement procedural geometry using intersection
 
 ![D3D12 Raytracing Procedural Geometry GUI](src/D3D12RaytracingProceduralGeometry/Screenshot_small.png)
 
-## 4. [Library Subobjects Sample](src/D3D12RaytracingLibrarySubobjects/readme.md)
-This sample modifies the Simple Lighting sample, and illustrates how to use library subobjects.
-
-![D3D12 Raytracing Library Subobjects GUI](src/D3D12RaytracingLibrarySubobjects/Screenshot_small.png)
-
-
 # Advanced Samples
-## [Real-Time Denoised Ambient Occlusion](src/D3D12RaytracingRealTimeDenoisedAmbientOcclusion/readme.md)
-This sample implements a real-time denoiser for 1spp raytraced Ambient Occlusion. It also demonstrates a physically-based specular pathtracer implementation and dynamic geometry support.
-
-![D3D12 Raytracing Real-Time Denoised Ambient Occlusion](src/D3D12RaytracingRealTimeDenoisedAmbientOcclusion/Screenshot_small.png)
 
 ## [MiniEngine Sample](src/D3D12RaytracingMiniEngineSample/readme.md)
-This sample demonstrates integration of the DirectX Raytracing in the MiniEngine's Model Viewer and several sample uses of raytracing.
+This sample demonstrates integration of the Fallback Layer in the MiniEngine's Model Viewer and several sample uses of raytracing.
 
 ![D3D12 Raytracing Mini Engine](src/D3D12RaytracingMiniEngineSample/Screenshot_small.png)
 
+## Requirements
+* [Visual Studio 2017](https://www.visualstudio.com/) version 15.8.4 or higher.
+* [Windows 10 October 2018 (17763) SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk).
+* *Fallback Layer* requires:
+  * Windows 10 with the Fall Creators Update or higher.
+  * Developer Mode enabled in the OS.
+  * Dx12 GPU with a driver that has retail DXIL support.
+  * DXR Fallback Compiler - download [DirectXRaytracingBinariesV1.5.zip](https://github.com/Microsoft/DirectX-Graphics-Samples/releases/tag/v1.5-dxr) and copy all the contents to Samples/Desktop/D3D12Raytracing/tools/x64.
+* *DirectX Raytracing* requires:
+  * Windows 10 with the October 2018 update. 
+  * Dx12 GPU with a compatible DirectX Raytracing driver.
+    * Nvidia: driver version 415 or higher.
+    * Other vendors - please consult the vendor you’re working with for HW and driver availability.
 
-## Further resources
-* [Nvidia's DXR samples Github](https://github.com/NVIDIAGameWorks/DxrTutorials)
+## Known limitations
+  - NV 397.31+ drivers do not properly support compute Fallback Layer on Nvidia Volta. Samples have artifacts and/or scenes miss altogether. Use the recommended DXR / driver based raytracing mode of samples on this configuration instead.
 
 ## Feedback and Questions
-We welcome all feedback, questions and discussions about DXR on our [discord server](http://discord.gg/directx).
+We welcome all feedback, questions and discussions about DXR and the Fallback Layer at [DirectX Raytracing forums](http://forums.directxtech.com/index.php?PHPSESSID=394klvdd3683tt1fjkh2jteav1&board=248.0).
