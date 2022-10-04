@@ -37,9 +37,6 @@
     <ClCompile Include="MortonCodesCalculator.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="PostBuildInfoQuery.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -78,6 +75,9 @@
     </ClCompile>
     <ClCompile Include="DxbcParser.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Headers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -189,9 +189,6 @@
     <ClInclude Include="LoadInstancesBindings.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="ShaderPass.h">
       <Filter>Headers</Filter>
     </ClInclude>
@@ -202,9 +199,6 @@
       <Filter>Shader Headers</Filter>
     </ClInclude>
     <ClInclude Include="DebugLog.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D12RaytracingFallback.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="FallbackDebug.h">
@@ -237,51 +231,54 @@
     <ClInclude Include="DxbcParser.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BitonicSortCommon.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="BottomLevelLoadTriangles.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="BuildBVHSplits.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="CalculateMortonCodes.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="ComputeAABBs.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="DebugLog.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="EmulatedPointer.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="EmulatedPointerIntrinsics.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="RayTracingHelper.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="ShaderUtil.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="TopLevelLoadAABBs.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="TraverseFunction.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="TraverseShader.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
     <None Include="packages.config" />
     <None Include="..\readme.md" />
     <None Include="..\contributing.md" />
     <None Include="..\developerguide.md" />
+    <None Include="BitonicSortCommon.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="BottomLevelLoadTriangles.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="BuildBVHSplits.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="CalculateMortonCodes.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="ComputeAABBs.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="EmulatedPointer.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="EmulatedPointerIntrinsics.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="RayTracingHelper.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="ShaderUtil.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="TopLevelLoadAABBs.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="TraverseFunction.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="TraverseShader.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
+    <None Include="DebugLog.hlsli">
+      <Filter>Shaders\Headers</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Shaders">
@@ -296,8 +293,23 @@
     <Filter Include="Source">
       <UniqueIdentifier>{5ccb8222-9ccd-43d6-bcff-54bb21ec76ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders\Headers">
+      <UniqueIdentifier>{a867b0a7-80fb-452a-80fb-01973a94ecdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Libraries">
+      <UniqueIdentifier>{a70454d6-301d-4661-9224-5087985e8530}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <FxCompile Include="TraverseShaderLib.hlsl">
+      <Filter>Shaders\Libraries</Filter>
+    </FxCompile>
+    <FxCompile Include="StateMachineLib.hlsl">
+      <Filter>Shaders\Libraries</Filter>
+    </FxCompile>
+    <FxCompile Include="MinimalTraverseShaderLib.hlsl">
+      <Filter>Shaders\Libraries</Filter>
+    </FxCompile>
     <FxCompile Include="BitonicIndirectArgsCS.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
@@ -358,16 +370,10 @@
     <FxCompile Include="LoadTrianglesNoIndexBuffer.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="MinimalTraverseShaderLib.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
     <FxCompile Include="RearrangeBVHs.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
     <FxCompile Include="RearrangeTriangles.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="StateMachineLib.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
     <FxCompile Include="TopLevelBuildBVHSplits.hlsl">
@@ -383,9 +389,6 @@
       <Filter>Shaders</Filter>
     </FxCompile>
     <FxCompile Include="TopLevelPrepareForComputeAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TraverseShaderLib.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
     <FxCompile Include="TreeletReorder.hlsl">

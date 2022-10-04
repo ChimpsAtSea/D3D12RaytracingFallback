@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 #include "LoadPrimitivesBindings.h"
 #include "CompiledShaders/LoadTrianglesFromR16IndexBuffer.h"
 #include "CompiledShaders/LoadTrianglesFromR32IndexBuffer.h"

@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 
 HRESULT D3D12CreateRaytracingFallbackDevice(
     _In_ ID3D12Device *pDevice, 

@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 
 #include "CompiledShaders/GetBVHCompactedSize.h"
 PostBuildInfoQuery::PostBuildInfoQuery(ID3D12Device *pDevice, UINT nodeMask)

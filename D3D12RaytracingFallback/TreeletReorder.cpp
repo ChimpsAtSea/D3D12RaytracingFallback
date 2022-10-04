@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 #include "CompiledShaders/ClearBuffers.h"
 #include "CompiledShaders/FindTreelets.h"
 #include "CompiledShaders/TreeletReorder.h"

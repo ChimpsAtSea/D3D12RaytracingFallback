@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 #include "RearrangeTrianglesBindings.h"
 #include "CompiledShaders/RearrangeTriangles.h"
 #include "CompiledShaders/RearrangeBVHs.h"

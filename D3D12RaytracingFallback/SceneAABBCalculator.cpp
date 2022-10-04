@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 #include "CalculateSceneAABBBindings.h"
 #include "CompiledShaders/CalculateSceneAABBFromAABBs.h"
 #include "CompiledShaders/CalculateSceneAABBFromPrimitives.h"

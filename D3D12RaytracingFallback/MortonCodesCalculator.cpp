@@ -8,7 +8,7 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#include "pch.h"
+#include "stdafx.h"
 #include "CalculateMortonCodesBindings.h"
 #include "CompiledShaders/CalculateMortonCodesForPrimitives.h"
 #include "CompiledShaders/CalculateMortonCodesForAABBs.h"

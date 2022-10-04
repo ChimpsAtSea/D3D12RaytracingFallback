@@ -38,7 +38,7 @@ cbuffer MortonCodeCalculatorConstants : CONSTANT_REGISTER(MortonCodeCalculatorCo
     MortonCodeCalculatorConstants Constants;
 }
 
-#define BIT(x) (1 << (x))
+#define BIT(x) (1U << (x))
 
 AABB GetSceneAABB()
 {

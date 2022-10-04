@@ -21,7 +21,7 @@
 // Author(s):  James Stanard
 //
 
-#include "pch.h"
+#include "stdafx.h"
 
 #include "CompiledShaders/BitonicIndirectArgsCS.h"
 #include "CompiledShaders/BitonicPreSortCS.h"
