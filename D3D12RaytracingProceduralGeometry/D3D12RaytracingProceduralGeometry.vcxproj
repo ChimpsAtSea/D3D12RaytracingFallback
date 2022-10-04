@@ -82,8 +82,8 @@
       <DelayLoadDLLs>d3d12.dll</DelayLoadDLLs>
     </Link>
     <FxCompile>
-      <AdditionalOptions>-Qembed_debug %(AdditionalOptions)</AdditionalOptions>
-      <ShaderModel>6.3</ShaderModel>
+      <AdditionalOptions>-Qembed_debug /Vd %(AdditionalOptions)</AdditionalOptions>
+      <ShaderModel>6.2</ShaderModel>
       <ShaderType>Compute</ShaderType>
       <HeaderFileOutput>CompiledShaders\%(Filename).h</HeaderFileOutput>
       <VariableName>g_p%(Filename)</VariableName>
@@ -111,10 +111,11 @@
     </Link>
     <FxCompile />
     <FxCompile>
-      <ShaderModel>6.3</ShaderModel>
+      <ShaderModel>6.2</ShaderModel>
       <ShaderType>Compute</ShaderType>
       <HeaderFileOutput>CompiledShaders\%(Filename).h</HeaderFileOutput>
       <VariableName>g_p%(Filename)</VariableName>
+      <AdditionalOptions>/Vd %(AdditionalOptions)</AdditionalOptions>
     </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
