@@ -19,3 +19,5 @@
 
 *.vcxproj.user
 *.opendb
+
+DXC/*
