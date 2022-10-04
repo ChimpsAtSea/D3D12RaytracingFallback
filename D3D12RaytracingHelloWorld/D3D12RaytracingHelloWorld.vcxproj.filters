@@ -74,9 +74,7 @@
     <ClCompile Include="DeviceResources.cpp">
       <Filter>Source Files\Util</Filter>
     </ClCompile>
-    <ClCompile Include="D3D12RaytracingHelloWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="D3D12RaytracingHelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />

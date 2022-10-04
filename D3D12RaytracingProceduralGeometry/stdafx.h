@@ -51,6 +51,6 @@
 #include <dxgidebug.h>
 #endif
 
-#include "DXSampleHelper.h"
-#include "DeviceResources.h"
+#include "util/DXSampleHelper.h"
+#include "util/DeviceResources.h"
 

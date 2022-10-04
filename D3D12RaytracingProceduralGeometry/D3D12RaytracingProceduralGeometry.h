@@ -11,11 +11,11 @@
 
 #pragma once
 
-#include "DXSample.h"
-#include "StepTimer.h"
+#include "util/DXSample.h"
+#include "util/StepTimer.h"
 #include "RaytracingSceneDefines.h"
 #include "DirectXRaytracingHelper.h"
-#include "PerformanceTimers.h"
+#include "util/PerformanceTimers.h"
 
 // The sample supports both Raytracing Fallback Layer and DirectX Raytracing APIs. 
 // This is purely for demonstration purposes to show where the API differences are. 
