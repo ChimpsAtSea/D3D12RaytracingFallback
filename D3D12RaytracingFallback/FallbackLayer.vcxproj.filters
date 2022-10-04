@@ -1,98 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <FxCompile Include="BitonicIndirectArgsCS.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BitonicInnerSortCS.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BitonicOuterSortCS.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BitonicPreSortCS.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BottomLevelBuildBVHSplits.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BottomLevelComputeAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BottomLevelLoadTriangles.hlsli">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="BottomLevelPrepareForComputeAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="CalculateSceneAABBFromBVHs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="CalculateSceneAABBFromAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="CalculateMortonCodesForAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="GetBVHCompactedSize.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="GpuBvh2Copy.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="LoadTrianglesFromR16IndexBuffer.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="LoadTrianglesFromR32IndexBuffer.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="LoadTrianglesNoIndexBuffer.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="*Lib.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TopLevelBuildBVHSplits.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TopLevelComputeAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TopLevelLoadAABBsFromArrayOfInstances.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TopLevelLoadAABBsFromArrayOfPointers.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TopLevelPrepareForComputeAABBs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="RearrangeBVHs.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="RearrangeTriangles.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="TreeletReorder.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="LoadProceduralGeometry.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="CalculateMortonCodesForPrimitives.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="CalculateSceneAABBFromPrimitives.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="FindTreelets.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="ClearBuffers.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="AccelerationStructureBuilderFactory.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -190,15 +98,6 @@
     </ClInclude>
     <ClInclude Include="AccelerationStructureBuilder.h">
       <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="EmulatedPointer.hlsli">
-      <Filter>Shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="EmulatedPointerIntrinsics.hlsli">
-      <Filter>Shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderUtil.hlsli">
-      <Filter>Shaders</Filter>
     </ClInclude>
     <ClInclude Include="Util.h">
       <Filter>Headers</Filter>
@@ -343,7 +242,13 @@
     <None Include="BitonicSortCommon.hlsli">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="BottomLevelLoadTriangles.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
     <None Include="BuildBVHSplits.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="CalculateMortonCodes.hlsli">
       <Filter>Shaders</Filter>
     </None>
     <None Include="ComputeAABBs.hlsli">
@@ -352,7 +257,16 @@
     <None Include="DebugLog.hlsli">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="EmulatedPointer.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="EmulatedPointerIntrinsics.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
     <None Include="RayTracingHelper.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="ShaderUtil.hlsli">
       <Filter>Shaders</Filter>
     </None>
     <None Include="TopLevelLoadAABBs.hlsli">
@@ -364,13 +278,10 @@
     <None Include="TraverseShader.hlsli">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="packages.config" />
+    <None Include="..\readme.md" />
     <None Include="..\contributing.md" />
     <None Include="..\developerguide.md" />
-    <None Include="..\readme.md" />
-    <None Include="packages.config" />
-    <None Include="CalculateMortonCodes.hlsli">
-      <Filter>Shaders</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Shaders">
@@ -385,5 +296,100 @@
     <Filter Include="Source">
       <UniqueIdentifier>{5ccb8222-9ccd-43d6-bcff-54bb21ec76ae}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="BitonicIndirectArgsCS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BitonicInnerSortCS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BitonicOuterSortCS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BitonicPreSortCS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BottomLevelBuildBVHSplits.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BottomLevelComputeAABBs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BottomLevelPrepareForComputeAABBs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="CalculateMortonCodesForAABBs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="CalculateMortonCodesForPrimitives.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="CalculateSceneAABBFromAABBs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="CalculateSceneAABBFromBVHs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="CalculateSceneAABBFromPrimitives.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ClearBuffers.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="FindTreelets.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="GetBVHCompactedSize.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="GpuBvh2Copy.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="LoadProceduralGeometry.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="LoadTrianglesFromR16IndexBuffer.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="LoadTrianglesFromR32IndexBuffer.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="LoadTrianglesNoIndexBuffer.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="MinimalTraverseShaderLib.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="RearrangeBVHs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="RearrangeTriangles.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="StateMachineLib.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TopLevelBuildBVHSplits.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TopLevelComputeAABBs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TopLevelLoadAABBsFromArrayOfInstances.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TopLevelLoadAABBsFromArrayOfPointers.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TopLevelPrepareForComputeAABBs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TraverseShaderLib.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TreeletReorder.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
