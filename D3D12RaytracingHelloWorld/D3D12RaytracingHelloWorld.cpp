@@ -536,7 +536,7 @@ void D3D12RaytracingHelloWorld::BuildShaderTables()
     }
     else // DirectX Raytracing
     {
-        ComPtr<ID3D12StateObjectPropertiesPrototype> stateObjectProperties;
+        ComPtr<ID3D12StateObjectProperties> stateObjectProperties;
         ThrowIfFailed(m_dxrStateObject.As(&stateObjectProperties));
         GetShaderIdentifiers(stateObjectProperties.Get());
         shaderIdentifierSize = D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES;
